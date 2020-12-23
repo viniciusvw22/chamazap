@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Chamar Whatsapp</title>
+  
+  <link rel="stylesheet" href="_css/estilos.css">
+</head>
+<body>
+  <div id="interface">
+    <header id="cabecalho">
+      <nav id="menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Dê sugestões para o site!</a></li>
+          <li><a href="index.html">Contato</a></li>
+          <li><a href="index.html">Código no GitHub (contribua)!</a></li>
+          <li><a href="index.html">Sobre mim</a></li>
+        </ul>
+      </nav>
+      
+      <h1>Chama Zap</h1>
+      <h2>Chame agora qualquer pessoa fora da sua lista de contatos!</h2>
+      <img id="whatsicone" src="_imagens/whatsicone-peq.png">
+    </header>
+    
+
+    <form action="chamar-whatsapp.php" method="get" target="_blank" id="cadastro-zap">
+
+      <div id="form-conteudo">
+        <!--Código do país:-->
+        <label for="cCodPais">
+          1º) Selecione um código de país:
+        </label>
+        <select name="codPais" id="cCodPais" onchange="escreverCodPaisEm('cTelef')">
+          <option value=" ">Selecione um país ou escreva abaixo</option>
+          <option value="+55">Brasil (+55)</option>
+          <option value="+1">Estados Unidos (+1)</option>
+        </select><br>
+
+        <!--Telefone completo:-->   
+        <label for="cTelef">
+          2º) Número de telefone:
+        </label>
+        <input type="text" value="" size="40" name="phone" placeholder="(Código de país)+(DDD)+(Número do celular)" id="cTelef" oninput="verificarSePaisOk()">
+        <input type="submit" value="Chamar no Whatsapp!">
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function escreverCodPaisEm(destinoId) {
+      var codPais = document.getElementById("cCodPais").value;
+      var cDestino = document.getElementById(destinoId)
+      //document.getElementById(destinoId).value=codPais+" ";
+      cDestino.value=codPais+" ";
+      cDestino.focus();
+    }
+    function extrairNumeros(destaString) {
+      var numeros = "";
+      for (ch of destaString) {
+        if (ch >= "0" && ch <= "9") {
+          numeros += ch;
+        }
+      }
+      return numeros;
+    }
+    function verificarSePaisOk() {
+      var numTelefone = document.getElementById("cTelef").value;
+      var codPaisBox = document.getElementById("cCodPais");
+      var paisesDisponiveis = codPaisBox.getElementsByTagName("option");
+      //Marcando automaticamente a seleção do código de país para o usuário, melhorando a experiência de uso.
+      var codDoPais = "";
+      codPaisBox.value = "";
+      numTelefone = extrairNumeros(numTelefone);
+      for (paisDaLista of paisesDisponiveis) {
+        codDoPais = extrairNumeros(paisDaLista.value);
+        if (numTelefone.startsWith(codDoPais)) {
+          codPaisBox.value = paisDaLista.value;
+        }
+      }
+   
+    }
+    </script>
+
+
+
+
+
+</body></html>
