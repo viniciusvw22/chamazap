@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap');
+
+@font-face {
+  font-family: 'MinhaFonteLogo';
+  src: url("../_fonts/Montserrat/Montserrat-Light.ttf");
+}
+@font-face {
+  font-family: "Fonte Cabecalho H2";
+  src: url("../_fonts/Roboto/Roboto-Medium.ttf");
+}
+body {
+  background-color: #abc7ff;
+  height: 1000px;
+  margin-top: 0px;
+}
+
+/* Área de cabeçalho */
+header#cabecalho {
+  height: 165px;
+  border-bottom: 1px dotted rgb(107, 107, 189);
+  background: url("../_imagens/whatsapp-icone-texto.png") 0px 110px/150px 54px no-repeat;
+}
+
+header#cabecalho h1 {
+  font-size: 20pt;
+  font-family: 'MinhaFonteLogo', monospace;
+  font-weight: 300;
+  text-shadow: 0px 1px 0px rgb(5, 206, 39);
+  color: rgb(0, 0, 211);
+  margin-bottom: 0px;
+  padding: 0px;
+
+}
+
+header#cabecalho h2 {
+  font-size: 14pt;
+  font-family: "Fonte Cabecalho H2", monospace;
+  /*text-shadow: 1px 0px 0px rgba(23, 247, 2, 0.34);*/
+  font-weight: 300;
+  color: rgba(78, 158, 53, 0.966);
+  margin-top: 0px;
+  padding: 0px;
+  /*rgba(23, 247, 2, 0.74)*/
+}
+
+/* Imagens do cabeçalho */
+img#whatsicone {
+  position: relative;
+  /*top: 120px;*/
+  left: 760px;
+  
+}
+
+/* Menu de navegação */
+nav#menu ul {  
+  width: 800px;
+  margin: 0px auto 0px 50px;
+}
+nav#menu ul li{
+  display: inline-block;
+  background-color: orange;
+  margin: 0px 2px 0px 2px;
+  padding: 10px 15px 10px 15px; 
+  transition: background-color 1s;
+}
+nav#menu ul li:hover {
+  background-color: rgba(0, 255, 64, 0.452);
+}
+
+nav#menu a {
+  text-decoration: none;
+  color: black;
+}
+nav#menu ul li:hover a {
+  text-decoration: underline;
+}
+div#interface {
+  width: 800px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #c6ffab;
+  /*box-shadow: 3px 2px 2px rgb(0, 98, 209, 0.4);*/
+  box-shadow: 1px 2px 4px rgb(0, 98, 209, 0.4);
+  padding: 0px 10px 0px 10px;
+
+}
+form#cadastro-zap {
+  /* background-color: #c6ffab;*/
+  width: 780px;
+  padding: 10px;
+  margin: 10px auto 0px auto;
+  /*box-shadow: 3px 2px 2px rgb(0, 98, 209, 0.4);*/
+  padding: 10px;
+  border: 1px solid rgba(20, 121, 11, 0.238);
+}
+div#form-conteudo {
+  width: 630px;
+  margin: 0px auto 0px auto;
+}
+
+
+
+
+
+
