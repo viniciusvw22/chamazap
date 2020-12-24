@@ -20,7 +20,7 @@ body {
 header#cabecalho {
   height: 165px;
   border-bottom: 1px dotted rgb(107, 107, 189);
-  background: url("../_imagens/whatsapp-icone-texto.png") 0px 110px/150px 54px no-repeat;
+  background: url("../imagens/whatsapp-icone-texto.png") 0px 110px/150px 54px no-repeat;
 }
 
 header#cabecalho h1 {
