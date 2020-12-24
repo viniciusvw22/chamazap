@@ -4,11 +4,11 @@
 
 @font-face {
   font-family: 'MinhaFonteLogo';
-  src: url("../_fonts/Montserrat/Montserrat-Light.ttf");
+  src: url("../fonts/Montserrat/Montserrat-Light.ttf");
 }
 @font-face {
   font-family: "Fonte Cabecalho H2";
-  src: url("../_fonts/Roboto/Roboto-Medium.ttf");
+  src: url("../fonts/Roboto/Roboto-Medium.ttf");
 }
 body {
   background-color: #abc7ff;
