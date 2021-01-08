@@ -22,28 +22,48 @@
       <img id="whatsicone" src="imagens/whatsicone-peq.png">
     </header>
     
+    <section id="secao-corpo">
+      <form action="chamar-whatsapp.php" method="get" target="_blank" id="cadastro-zap">
 
-    <form action="chamar-whatsapp.php" method="get" target="_blank" id="cadastro-zap">
+        <div id="form-conteudo">
+          <!--Código do país:-->
+          <label for="cCodPais">
+            1º) Selecione um código de país:
+          </label>
+          <select name="codPais" id="cCodPais" onchange="escreverCodPaisEm('cTelef')">
+            <option value=" ">Selecione um país ou escreva abaixo</option>
+            <option value="+55">Brasil (+55)</option>
+            <option value="+1">Estados Unidos (+1)</option>
+          </select><br>
 
-      <div id="form-conteudo">
-        <!--Código do país:-->
-        <label for="cCodPais">
-          1º) Selecione um código de país:
-        </label>
-        <select name="codPais" id="cCodPais" onchange="escreverCodPaisEm('cTelef')">
-          <option value=" ">Selecione um país ou escreva abaixo</option>
-          <option value="+55">Brasil (+55)</option>
-          <option value="+1">Estados Unidos (+1)</option>
-        </select><br>
+          <!--Telefone completo:-->   
+          <label for="cTelef">
+            2º) Número de telefone:
+          </label>
+          <input type="text" value="" size="40" name="phone" placeholder="(Código de país)+(DDD)+(Número do celular)" id="cTelef" oninput="verificarSePaisOk()">
+          <input type="submit" value="Chamar no Whatsapp!">
+        </div>
+      </form>
+    </section>
+    <aside id="lateral">
+      <h3>História</h3>
+      <p>Whastapp é um aplicativo de mensagem fundado em 2009 por Brian Acton e Jan Koum. Em 2014, foi comprada pelo Facebook, pelo valor de US$ 16 bilhões. 
+        <a href="https://pt.wikipedia.org/wiki/WhatsApp" 
+           target="_blank"><sup>[fonte: wikipedia.com]</sup></a>
+      </p>
+    </aside>
 
-        <!--Telefone completo:-->   
-        <label for="cTelef">
-          2º) Número de telefone:
-        </label>
-        <input type="text" value="" size="40" name="phone" placeholder="(Código de país)+(DDD)+(Número do celular)" id="cTelef" oninput="verificarSePaisOk()">
-        <input type="submit" value="Chamar no Whatsapp!">
-      </div>
-    </form>
+    <footer id="rodape">
+      <p>Copyright &copy; 2020 - by Vinícius Viana</p>
+      <p>Licença GNU GPL v3.0 - para uso do código, deve-se dar o devido crédito 
+        <a href="https://www.alura.com.br/artigos/como-escolher-uma-licenca-para-seu-projeto" target="_blank">[mais]</a>
+      </p>
+      <p>
+        <a href="https://www.linkedin.com/in/viniciusvianawerneck/" target="_blank">Linkedin</a>,
+        <a href="https://github.com/viniciusvw22/" target="_blank">GitHub</a> e 
+        <a href="https://wa.me/5521972221307" target="_blank">Whatsapp</a>
+      </p>
+    </footer>
   </div>
 
   <script>

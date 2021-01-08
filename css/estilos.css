@@ -19,7 +19,7 @@ body {
 /* Área de cabeçalho */
 header#cabecalho {
   height: 165px;
-  border-bottom: 1px dotted rgb(107, 107, 189);
+  border-bottom: 1px solid rgba(153, 192, 153, 0.486);
   background: url("../imagens/whatsapp-icone-texto.png") 0px 110px/150px 54px no-repeat;
 }
 
@@ -56,7 +56,7 @@ img#whatsicone {
 /* Menu de navegação */
 nav#menu ul {  
   width: 800px;
-  margin: 0px auto 0px 50px;
+  margin: 0px auto 0px auto;
 }
 nav#menu ul li{
   display: inline-block;
@@ -76,22 +76,62 @@ nav#menu a {
 nav#menu ul li:hover a {
   text-decoration: underline;
 }
+
+/* Seções da página */
 div#interface {
-  width: 800px;
-  height: 600px;
+  width: 1200px;
+  height: 900px;
   margin-left: auto;
   margin-right: auto;
   background-color: #c6ffab;
   /*box-shadow: 3px 2px 2px rgb(0, 98, 209, 0.4);*/
   box-shadow: 1px 2px 4px rgb(0, 98, 209, 0.4);
-  padding: 0px 10px 0px 10px;
+  padding: 0px 10px 10px 10px;
 
 }
+
+/* Seção da página: corpo (principal) */
+section#secao-corpo {
+  float: left;
+  border-right: 1px solid rgba(153, 192, 153, 0.486);
+  height: 734px;
+  margin-bottom: 30px;
+}
+
+/* Seção da página: lateral */
+aside#lateral {
+  float: right;
+  width: 377px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+aside#lateral h3 {
+  margin-top: 0px;
+}
+
+/* Seção da página: rodapé */
+footer#rodape {
+  clear: left;
+  margin-top: 200px;
+  height: 106px;
+}
+
+footer#rodape p {
+  text-align: center;
+}
+footer#rodape a {
+  text-decoration: none;
+  color: black;
+}
+footer#rodape a:hover {
+  text-decoration: underline; 
+}
+
 form#cadastro-zap {
   /* background-color: #c6ffab;*/
   width: 780px;
   padding: 10px;
-  margin: 10px auto 0px auto;
+  margin: 10px 10px 0px 10px;
   /*box-shadow: 3px 2px 2px rgb(0, 98, 209, 0.4);*/
   padding: 10px;
   border: 1px solid rgba(20, 121, 11, 0.238);
